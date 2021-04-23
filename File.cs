@@ -88,10 +88,15 @@ namespace kOS
         public string Serialize()
         {
             string output = "";
-
-            foreach (String s in this)
+            
+            for(int i = 0; i < this.Count; i++)
             {
-                output += s + "\n";
+			    output += this[i];
+			
+                if(i != this.Count - 1)
+                {
+				    output += "\n";
+                }
             }
 
             return output;
